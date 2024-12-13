@@ -95,38 +95,3 @@ for party in parties:
         ans += 1
 
 print(ans)
-
-'''answer = 0
-n, m = map(int, input().split())
-know = list(map(int, input().split())) 
-true_count, true_people = know[0], set(know[1:])
-true_people.sort()
-
-
-party_list = []
-for i in range(m):
-    come = list(map(int, input().split()))
-    come_count, come_people = come[0], come[1:]
-    party_list.append((come_count, come_people))
-#party_list.sort()'''
-
-
-
-'''graph = make_graph(n, party_list)
-
-must_true_set = set()
-for start in true_people:
-    new_true = bfs(start, graph)
-    must_true_set.update(new_true)
-
-for _, people in party_list:
-    tell_lie = True
-    for person in people:
-        if person in must_true_set:
-            tell_lie = False
-            break
-    
-    if tell_lie:
-        answer += 1
-
-print(answer)'''
