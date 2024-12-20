@@ -27,7 +27,9 @@ def dijkstra(start, graph):
     while heap:
         current_dist, current_node = heapq.heappop(heap)
 
-        if current_dist > dist_list[current_node]:
+        # 현재 노드에 도착하기까지 걸렸던 총 비용 > 출발 노드로부터 현재 노드까지의 최단거리
+        # 확인할 필요가 없으니, 힙에서 제외. 앞으로도 힙에 포함될 일 없음음
+        if current_dist > dist_list[current_node]: 
             continue
 
         for next_node, next_dist in graph[current_node].items():
